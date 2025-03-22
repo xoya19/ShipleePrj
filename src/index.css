@@ -1,0 +1,315 @@
+/* General Page Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Welcome Page Container */
+.welcome-page {
+  width: 400px;
+  height: 620.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background: url("./assets/wel-image.png") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInSlide 1s ease-out forwards, pulse 2s infinite 2s;
+}
+
+/* Welcome Text */
+.welcome-text {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding-top: 30px;
+  animation: fadeIn 1.5s ease-in-out forwards, float 3s ease-in-out infinite;
+}
+
+/* Button Positioned at the Bottom */
+.welcome-page button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-top: auto;
+  align-self: stretch;
+  animation: bounceIn 1s ease-out 0.5s forwards, glow 2s infinite 3s;
+}
+
+.welcome-page button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* 📌 Booking Page Styling */
+.booking-page {
+  width: 400px;
+  height: 620.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background: url("./assets/booking-image.png") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInSlide 1s ease-out forwards;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Form Elements */
+.booking-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Header Text */
+h4 {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  padding-top: 15px;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Input Fields */
+textarea,
+input,
+select {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0;
+  height: 48px;
+  line-height: 1.5;
+  resize: none;
+}
+
+/* Specific styling for textarea */
+textarea {
+  height: 48px;
+  line-height: 1.5;
+  resize: none;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+}
+
+/* Select Dropdown */
+select {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+select option {
+  background-color: rgba(216, 207, 162, 0.514);
+  color: rgb(219, 195, 110);
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  border: 2px solid white;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.booking-page button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* Cost Display Box */
+.cost-box {
+  margin-top: 20px;
+  padding: 12px;
+  background: #f1d19e60;
+  border: solid 2px white;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show Cost Box */
+.cost-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Return Button */
+.return-button {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show Return Button */
+.return-button.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations */
+
+/* Fade-in and Slide Down Effect */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth Fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Bounce-in Button Effect */
+@keyframes bounceIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+
+  .welcome-page,
+  .booking-page {
+    width: 85%;
+    height: auto;
+    padding: 15px;
+  }
+}
