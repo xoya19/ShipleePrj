@@ -63,7 +63,6 @@ export default function App() {
     <div className="container">
       {!isBooked ? (
         <div className="welcome-page">
-          <h2>Welcome to the Shipment Booking</h2>
           <button onClick={handleBooking}>BOOK A SHIPMENT</button>
         </div>
       ) : (
